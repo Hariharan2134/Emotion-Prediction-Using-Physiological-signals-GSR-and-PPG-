@@ -1,44 +1,56 @@
-Emotion Prediction from Physiological Signals 😊💓
+😊 Emotion Prediction from Physiological Signals
+This project focuses on predicting human emotions based on physiological signals such as Blood Volume Pulse (BVP) and Galvanic Skin Response (GSR). By analyzing these signals, it predicts emotional states using machine learning models, helping to understand and classify emotions automatically.
 
-About the Project
-This project predicts human emotions based on physiological signals — specifically BVP (Blood Volume Pulse) and GSR (Galvanic Skin Response). By analyzing these signals, we estimate valence (positivity) and arousal (intensity) values and map them to common emotions like Happy, Sad, Fear, Anger, and more.
+🧠 Project Overview
+The project processes physiological data along with annotated emotional labels to build predictive models for valence and arousal, which are core components of emotional states. Using techniques like Random Forest, XGBoost, and deep learning models (CNN-BiLSTM), it maps these predictions to specific emotions such as Happy, Sad, Fear, Anger, and more.
 
-What’s Inside? 📦
-Data merging: Combine physiological data and emotion annotations into one file.
+🛠️ Technology Stack
+Language: Python 3.x
+Libraries: pandas, numpy, scikit-learn, imblearn, xgboost, tensorflow/keras
+Environment: Jupyter Notebook / Python scripts
 
-Machine Learning Models:
+📁 Dataset
+Name: CASE Dataset (Continuously Annotated Signals of Emotion) 
+Link: [https://springernature.figshare.com/articles/dataset/CASE_Dataset-full/8869157?file=16260497]
+Format: CSV files
+Contains physiological signal data (BVP, GSR) and annotations for valence and arousal levels
 
-Random Forest classifier
+🔧 How It Works
 
-XGBoost regressor
+Loads and merges physiological and annotation datasets into a single CSV file.
 
-Deep Learning Model: CNN + BiLSTM for time-series prediction.
+Preprocesses data by scaling and balancing classes using SMOTE.
 
-Emotion Mapping: Translate valence and arousal predictions into six emotions.
+Trains machine learning models (Random Forest, XGBoost) to predict valence and arousal.
 
-Sample tests: Run example inputs to see predicted emotions.
+Implements a CNN-BiLSTM deep learning model for improved prediction accuracy.
 
-How to Use? 🚀
-Put your raw data files in the right folders (see the scripts).
+Maps predicted valence and arousal values, combined with physiological signals, to discrete emotion categories.
 
-Run merge_files.py to create a combined dataset.
+Evaluates model performance using accuracy, confusion matrix, and cross-validation.
 
-Choose a model:
+▶️ How to Run
 
-Run random_forest_prediction.py for Random Forest predictions.
+Clone or download the repository.
 
-Run xgboost_prediction.py for XGBoost predictions.
+Install required Python libraries listed in requirements.txt or manually: pandas, numpy, scikit-learn, imblearn, xgboost, tensorflow.
 
-Run cnn_bilstm_prediction.py for deep learning predictions.
+Place your merged_data.csv file in the project folder.
 
-Check the terminal for results and predicted emotions!
+Run the Python scripts or notebooks in order to preprocess data, train models, and test predictions.
 
-Why This Project? 🤔
-Understanding emotions through wearable sensors can improve health monitoring, mental well-being apps, and human-computer interactions. This project shows how simple signals like BVP and GSR can help decode emotional states using AI.
+🧩 Use Cases
 
-Future Improvements 🌟
-Include more physiological signals for better accuracy.
+Emotion recognition for healthcare and mental wellness monitoring.
 
-Optimize deep learning models for real-time prediction.
+Enhancing human-computer interaction by detecting user emotions.
 
-Deploy as a web or mobile app for easy user interaction.
+Real-time emotion monitoring in applications such as gaming and education.
+
+📝 Notes
+
+Model accuracy depends on quality and size of physiological data.
+
+Hyperparameters can be tuned for better performance.
+
+Predicted emotions should be interpreted in context with domain knowledge.
