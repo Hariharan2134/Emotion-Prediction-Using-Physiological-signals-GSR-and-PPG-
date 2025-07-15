@@ -1,121 +1,43 @@
-# Emotion-Prediction-Using-Physiological-signals-GSR-and-PPG-
-# 🧠 Emotion Prediction from PPG and GSR Signals
+Emotion Prediction from Physiological Signals 😊💓
+About the Project
+This project predicts human emotions based on physiological signals — specifically BVP (Blood Volume Pulse) and GSR (Galvanic Skin Response). By analyzing these signals, we estimate valence (positivity) and arousal (intensity) values and map them to common emotions like Happy, Sad, Fear, Anger, and more.
 
-This project focuses on predicting **valence**, **arousal**, and classifying **emotions** using physiological signals — **PPG (BVP)** and **GSR**. This work was completed as part of an internship project at **NIT Trichy**.
+What’s Inside? 📦
+Data merging: Combine physiological data and emotion annotations into one file.
 
----
+Machine Learning Models:
 
-## 🎯 Objectives
+Random Forest classifier
 
-- Predict continuous **valence** and **arousal** values.
-- Classify data into one of six emotions:  
-  `Happy`, `Excitement`, `Neutral`, `Fear`, `Sad`, `Anger`
-- Implement multiple modeling approaches:
-  - Machine Learning: `Random Forest`, `XGBoost`
-  - Deep Learning: `CNN + BiLSTM`
+XGBoost regressor
 
----
+Deep Learning Model: CNN + BiLSTM for time-series prediction.
 
-## 🛠️ Tech Stack
+Emotion Mapping: Translate valence and arousal predictions into six emotions.
 
-| Component   | Tools & Libraries           |
-|------------|-----------------------------|
-| Language    | Python 3.x                  |
-| ML Models   | scikit-learn, XGBoost       |
-| DL Models   | TensorFlow, Keras           |
-| Preprocessing | Pandas, NumPy, SMOTE      |
-| Visualization | Matplotlib (optional)     |
+Sample tests: Run example inputs to see predicted emotions.
 
----
+How to Use? 🚀
+Put your raw data files in the right folders (see the scripts).
 
-## 📂 Project Structure
+Run merge_files.py to create a combined dataset.
 
-| Folder/File             | Description                                         |
-|-------------------------|-----------------------------------------------------|
-| `data/`                 | Sample annotation and physiological CSVs           |
-| `preprocessing/`        | Merging and preprocessing scripts                  |
-| `models/`               | ML & DL model scripts                              |
-| `results/`              | Logs and output predictions                        |
-| `README.md`             | Project overview and usage guide                   |
-| `requirements.txt`      | Python dependencies                                |
-| `LICENSE`               | (Optional) MIT License                             |
+Choose a model:
 
----
+Run random_forest_prediction.py for Random Forest predictions.
 
-## 🚀 Getting Started
+Run xgboost_prediction.py for XGBoost predictions.
 
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/your-username/emotion-prediction-ppg-gsr-nit.git
-cd emotion-prediction-ppg-gsr-nit
-2️⃣ Install dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-3️⃣ Prepare data
-Make sure your physiological and annotations files are ready.
-Run the merge script:
+Run cnn_bilstm_prediction.py for deep learning predictions.
 
-bash
-Copy
-Edit
-python preprocessing/merge_and_prepare.py
-🤖 Models & Execution
-🔹 Random Forest
-bash
-Copy
-Edit
-python models/random_forest_model.py
-🔹 XGBoost
-bash
-Copy
-Edit
-python models/xgboost_model.py
-🔹 CNN + BiLSTM
-bash
-Copy
-Edit
-python models/cnn_bilstm_model.py
-📊 Sample Output
-Random Forest Valence Accuracy: 93.13%
+Check the terminal for results and predicted emotions!
 
-Random Forest Arousal Accuracy: 49.69%
+Why This Project? 🤔
+Understanding emotions through wearable sensors can improve health monitoring, mental well-being apps, and human-computer interactions. This project shows how simple signals like BVP and GSR can help decode emotional states using AI.
 
-CNN-BiLSTM MSE Loss: ~0.0065
+Future Improvements 🌟
+Include more physiological signals for better accuracy.
 
-Emotion predictions are printed based on PPG, GSR, and model outputs.
+Optimize deep learning models for real-time prediction.
 
-🧭 Emotion Mapping Logic
-Emotion is predicted using thresholds on predicted valence, arousal, PPG, and GSR:
-
-Emotion	Conditions (Simplified)
-Happy	High valence, high arousal, high PPG + GSR
-Excitement	High valence, low arousal, high PPG
-Neutral	Mid valence & arousal, normal PPG/GSR
-Fear	Low valence, low arousal, low PPG + GSR
-Sad	Low valence, high arousal, low PPG, high GSR
-Anger	Catch-all for other intense combinations
-
-📌 Notes
-All models were trained on merged physiological and annotation data.
-
-SMOTE is applied to handle data imbalance.
-
-CNN-BiLSTM requires windowed input (default: 10 time steps).
-
-yaml
-Copy
-Edit
-
----
-
-### 📦 requirements.txt (Copy into `requirements.txt`)
-
-```txt
-pandas
-numpy
-scikit-learn
-imbalanced-learn
-xgboost
-tensorflow
+Deploy as a web or mobile app for easy user interaction.
