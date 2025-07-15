@@ -10,9 +10,12 @@ Libraries: pandas, numpy, scikit-learn, imblearn, xgboost, tensorflow/keras
 Environment: Jupyter Notebook / Python scripts
 
 📁 Dataset
-Name: CASE Dataset (Continuously Annotated Signals of Emotion) 
+Name: CASE Dataset (Continuously Annotated Signals of Emotion)
+
 Link: [https://springernature.figshare.com/articles/dataset/CASE_Dataset-full/8869157?file=16260497]
+
 Format: CSV files
+
 Contains physiological signal data (BVP, GSR) and annotations for valence and arousal levels
 
 🔧 How It Works
