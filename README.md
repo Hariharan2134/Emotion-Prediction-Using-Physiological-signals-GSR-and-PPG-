@@ -1,4 +1,5 @@
 Emotion Prediction from Physiological Signals 😊💓
+
 About the Project
 This project predicts human emotions based on physiological signals — specifically BVP (Blood Volume Pulse) and GSR (Galvanic Skin Response). By analyzing these signals, we estimate valence (positivity) and arousal (intensity) values and map them to common emotions like Happy, Sad, Fear, Anger, and more.
 
